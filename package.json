@@ -1,0 +1,36 @@
+{
+  "name": "node-red-contrib-melsoft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "melsoft.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "melsoft": "red/melsoft.js"
+    }
+  },
+  "keywords": [
+    "plc",
+    "mitsubishi",
+    "melsoft",
+    "hardware",
+    "protocol",
+    "node-red",
+    "tcp"
+  ],
+  "bugs":{
+    "url": "https://github.com/st-one-io/node-red-contrib-melsoft/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st-one-io/node-red-contrib-melsoft.git"
+  },
+  "homepage": "https://github.com/st-one-io/node-red-contrib-melsoft#readme",
+  "author": "Fernando Amorim <fernando.amorim@st-one.io>",
+  "license": "ISC",
+  "optionalDependencies": {
+    "@protocols/node-melsoft": "1.0.0"
+  }
+}

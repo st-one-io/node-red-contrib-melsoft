@@ -1,0 +1,73 @@
+{
+    "melsoft":{
+        "endpoint":{
+            "status": {
+                "online": "online",
+                "offline":"offline",
+                "connecting": "connecting",
+                "unknown": "unknown"
+            },
+            "label":{
+                "address": "Address",
+                "port": "Port",
+                "cycletime": "Cycle Time",
+                "timeout": "Timeout",
+                "variables": {
+                    "list": "Variable list",
+                    "add": "Add",
+                    "clean": "Remove all",
+                    "del": "Remove",
+                    "name": "Name",
+                    "addr": "Address",
+                    "export": "Export",
+                    "import": "Import"
+                }
+            },
+            "error": {
+                "invalidtimeinterval": "Invalid time interval for cycle time of \"__interval__\""
+            },
+            "info": {
+                "cycletimetooshort": "Cycle time too short, enforcing minimum of __min__ ms",
+                "novars": "No variables configured, skipping cyclic reading"
+            },
+            "validation": {
+                "ERR_PARSE_EMPTY": "Address cannot be empty",
+                "ERR_PARSE_UNKNOWN_FORMAT": "Unknown address format, check node's help section"
+            }            
+        },
+        "in": {
+            "label": {
+                "name": "melsoft in",
+                "endpoint": "PLC",
+                "mode": "Mode",
+                "variable": "Variable",
+                "diff": "Emit only when value changes (diff)",
+                "variable-select": "Select a variable",
+                "variable-novar": "No variables"
+            },
+            "mode": {
+                "single": "Single variable",
+                "all-split": "All variables, one per message",
+                "all": "All variables"
+            }
+        },
+        "control": {
+            "label": {
+                "name": "melsoft control",
+                "function": "Function",
+                "endpoint": "PLC"
+            },
+            "function": {
+                "cycletime": "Cycle time",
+                "trigger": "Trigger read"
+            }
+        },
+        "label": {
+            "name": "Name"
+        },
+        "error": {
+            "missingconfig": "Missing configuration",
+            "invalidcontrolfunction": "Invalid control function \"__function__\""
+        }
+    }
+}
