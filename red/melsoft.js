@@ -1,9 +1,9 @@
 //@ts-check
-// try {
+try {
     var Melsoft = require("@protocols/node-melsoft");
-// }catch (error){
-//     var Melsoft = null;
-// }
+}catch (error){
+    var Melsoft = null;
+}
 
 const MIN_CYCLE_TIME = 10;
 
