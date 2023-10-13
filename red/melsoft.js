@@ -5,7 +5,7 @@ try {
     var Melsoft = null;
 }
 
-const MIN_CYCLE_TIME = 10;
+const MIN_CYCLE_TIME = 5000;
 
 module.exports = function (RED) {
 
