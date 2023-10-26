@@ -12,6 +12,7 @@
                 "port": "Port",
                 "cycletime": "Cycle Time",
                 "timeout": "Timeout",
+                "module": "Module",
                 "variables": {
                     "list": "Variable list",
                     "add": "Add",
