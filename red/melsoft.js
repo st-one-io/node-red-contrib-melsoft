@@ -101,6 +101,7 @@ module.exports = function (RED) {
         let that = this;
         let melsoftEndpoint = null
         let addressGroup = null;
+        let module = config.module;
         
         RED.nodes.createNode(this, config);
 
@@ -228,7 +229,7 @@ module.exports = function (RED) {
                 await disconnect();
             }
             
-            melsoftEndpoint = new Melsoft.MelsoftEndpoint({address, port, timeout});
+            melsoftEndpoint = new Melsoft.MelsoftEndpoint({address, port, timeout, module});
         
             melsoftEndpoint.on('connected', onConnect);
             melsoftEndpoint.on('disconnected', onDisconnect);
