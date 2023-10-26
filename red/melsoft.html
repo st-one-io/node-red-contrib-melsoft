@@ -13,6 +13,14 @@
 	</div>
 
 	<div class="form-row">
+		<label for="node-config-input-module"><i class="fa fa-server"></i> <span data-i18n="melsoft.endpoint.label.module"></span></label>
+		<select type="text" id="node-config-input-module">
+			<option value="PLC">PLC Module</option>
+			<option value="ETHERNET">Ethernet Module</option>
+		</select>
+	</div>
+
+	<div class="form-row">
 		<label for="node-config-input-timeout"><i class="fa fa-refresh"></i> <span data-i18n="melsoft.endpoint.label.timeout"></span></label>
         <input type="text" id="node-config-input-timeout" data-i18n="[placeholder]melsoft.endpoint.label.timeout" style="width: 80px;"> <span>ms</span>
 	</div>
@@ -156,6 +164,9 @@
 			timeout: {
 				value: 1500
 			},
+			module: {
+				value: "PLC"
+			},
             vartable: {
 				value: [{
 					name: "",
@@ -178,6 +189,8 @@
             var labelName = this._("melsoft.endpoint.label.variables.name");
 			var labelAddr = this._("melsoft.endpoint.label.variables.addr");
 			var labelDel = this._("melsoft.endpoint.label.variables.del");
+			var connectionModule = $('#node-config-input-module');
+			var portField = $('#node-config-input-port');
             
             $("#node-config-input-cycletime").spinner({
                 min: 0
@@ -297,6 +310,23 @@
 			});
 
             $("#node-config-melsoft-endpoint-var-clean").click(cleanVarTable);
+
+			if(!self.module){
+				self.module = "PLC";
+				connectionModule.val("PLC");
+			}
+
+			var previousModule = connectionModule.val();
+			connectionModule.change(function () {
+				var newModule = connectionModule.val();
+				if (newModule == "PLC"){
+					portField.val('5562')
+				} else if (newModule == "ETHERNET"){
+					portField.val("5554")
+				};
+				previousModule = newModule;
+			});
+			connectionModule.change();
 
             populateVarTable();
 
