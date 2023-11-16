@@ -316,18 +316,6 @@
 				connectionModule.val("PLC");
 			}
 
-			var previousModule = connectionModule.val();
-			connectionModule.change(function () {
-				var newModule = connectionModule.val();
-				if (newModule == "PLC"){
-					portField.val('5562')
-				} else if (newModule == "ETHERNET"){
-					portField.val("5554")
-				};
-				previousModule = newModule;
-			});
-			connectionModule.change();
-
             populateVarTable();
 
             // export
