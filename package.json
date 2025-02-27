@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-melsoft",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "melsoft.js",
   "scripts": {
@@ -32,5 +32,8 @@
   "license": "ISC",
   "optionalDependencies": {
     "@protocols/node-melsoft": "1.2.0"
-  }
+  },
+  "bundleDependencies": [
+    "@protocols/node-melsoft"
+  ]
 }
